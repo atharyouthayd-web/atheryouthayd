@@ -258,6 +258,190 @@
                     <h3><span class="lang-ar">برنامج التمكين الاقتصادي</span><span class="lang-en">Economic Empowerment Program</span></h3>
                     <p><span class="lang-ar">تدريب 100 شاب على إدارة المشاريع الصغيرة وتوفير منح تأسيسية.</span><span class="lang-en">Training 100 youth on small business management and providing startup grants.</span></p>
                 </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600" alt="مشروع 2">
+                <div class="card-content">
+                    <h3><span class="lang-ar">مبادرة سفراء السلام</span><span class="lang-en">Peace Ambassadors Initiative</span></h3>
+                    <p><span class="lang-ar">بناء قدرات 200 شاب في حل النزاعات وتعزيز التماسك المجتمعي.</span><span class="lang-en">Building capacity of 200 youth in conflict resolution and social cohesion.</span></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600" alt="مشروع 3">
+                <div class="card-content">
+                    <h3><span class="lang-ar">حملة التوعية الصحية</span><span class="lang-en">Health Awareness        }
+        .btn:hover {transform: translateY(-3px); box-shadow: 0 5px 15px rgba(245,158,11,0.4);}
+        section {padding: 4rem 5%; max-width: 1200px; margin: 0 auto;}
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            display: block;
+            margin: 1rem auto 0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+        .card:hover {transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15);}
+        .card img {width: 100%; height: 220px; object-fit: cover;}
+        .card-content {padding: 1.5rem;}
+        .card-content h3 {color: var(--primary); margin-bottom: 0.5rem;}
+        .news-date {color: #64748b; font-size: 0.9rem; margin-bottom: 0.5rem;}
+        .partners {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+        }
+        .partners img {
+            height: 80px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: 0.3s;
+        }
+        .partners img:hover {filter: grayscale(0); opacity: 1;}
+        .report-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 5% 1rem;
+        }
+        .contact-info {margin-bottom: 2rem;}
+        .contact-info a {color: var(--secondary); text-decoration: none;}
+        @media (max-width: 768px) {
+            .hero h2 {font-size: 1.8rem;}
+            nav {justify-content: center; font-size: 0.9rem;}
+            .logo h1 {font-size: 1.2rem;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="logo.jpeg" alt="شعار مؤسسة أثر شباب">
+                <h1>
+                    <span class="lang-ar">مؤسسة أثر شباب للتنمية</span>
+                    <span class="lang-en">Ather Youth Foundation</span>
+                </h1>
+            </div>
+            <nav>
+                <a href="#about"><span class="lang-ar">من نحن</span><span class="lang-en">About</span></a>
+                <a href="#news"><span class="lang-ar">الأخبار</span><span class="lang-en">News</span></a>
+                <a href="#projects"><span class="lang-ar">المشاريع</span><span class="lang-en">Projects</span></a>
+                <a href="#partners"><span class="lang-ar">الشركاء</span><span class="lang-en">Partners</span></a>
+                <a href="#reports"><span class="lang-ar">التقارير</span><span class="lang-en">Reports</span></a>
+                <a href="#contact"><span class="lang-ar">تواصل</span><span class="lang-en">Contact</span></a>
+                <button class="lang-btn" onclick="toggleLang()">
+                    <span class="lang-ar">EN</span>
+                    <span class="lang-en">AR</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>
+            <span class="lang-ar">نصنع الأثر.. نمكّن الشباب</span>
+            <span class="lang-en">Creating Impact.. Empowering Youth</span>
+        </h2>
+        <p>
+            <span class="lang-ar">مؤسسة غير ربحية تعمل على تمكين الشباب وتنمية المجتمع في حضرموت واليمن من خلال برامج التدريب والتأهيل والمبادرات التنموية.</span>
+            <span class="lang-en">A non-profit organization working to empower youth and develop communities in Hadhramout and Yemen through training, qualification programs and development initiatives.</span>
+        </p>
+        <a href="#contact" class="btn">
+            <span class="lang-ar">انضم إلينا</span>
+            <span class="lang-en">Join Us</span>
+        </a>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">
+            <span class="lang-ar">من نحن</span>
+            <span class="lang-en">About Us</span>
+        </h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p class="lang-ar">مؤسسة أثر شباب للتنمية هي منظمة مجتمع مدني غير ربحية تأسست بهدف الإسهام في تنمية المجتمع وتمكين الشباب عبر برامج نوعية في التدريب وبناء القدرات وريادة الأعمال والمبادرات المجتمعية.</p>
+            <p class="lang-en">Ather Youth Foundation is a non-profit civil society organization established to contribute to community development and youth empowerment through quality programs in training, capacity building, entrepreneurship, and community initiatives.</p>
+        </div>
+    </section>
+
+    <!-- قسم الأخبار -->
+    <section id="news" style="background: white;">
+        <h2 class="section-title">
+            <span class="lang-ar">أخبار المؤسسة</span>
+            <span class="lang-en">Foundation News</span>
+        </h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600" alt="خبر">
+                <div class="card-content">
+                    <div class="news-date">11 أبريل 2026</div>
+                    <h3><span class="lang-ar">إطلاق موقع المؤسسة الإلكتروني</span><span class="lang-en">Launch of Foundation Website</span></h3>
+                    <p><span class="lang-ar">أطلقت المؤسسة موقعها الإلكتروني الرسمي لتعزيز التواصل مع المجتمع والشركاء.</span><span class="lang-en">The foundation launched its official website to enhance communication with the community and partners.</span></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600" alt="خبر">
+                <div class="card-content">
+                    <div class="news-date">5 أبريل 2026</div>
+                    <h3><span class="lang-ar">اختتام برنامج تأهيل 50 شاب وشابة</span><span class="lang-en">Completion of 50 Youth Training Program</span></h3>
+                    <p><span class="lang-ar">اختتمت المؤسسة برنامج تأهيل الشباب في المهارات الحياتية وريادة الأعمال.</span><span class="lang-en">The foundation concluded the youth qualification program in life skills and entrepreneurship.</span></p>
+                </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600" alt="خبر">
+                <div class="card-content">
+                    <div class="news-date">28 مارس 2026</div>
+                    <h3><span class="lang-ar">توقيع شراكة مع منظمة دولية</span><span class="lang-en">Partnership Signed with International Organization</span></h3>
+                    <p><span class="lang-ar">وقعت المؤسسة اتفاقية شراكة لتنفيذ مشاريع تنموية في حضرموت.</span><span class="lang-en">The foundation signed a partnership agreement to implement development projects in Hadhramout.</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- معرض المشاريع -->
+    <section id="projects">
+        <h2 class="section-title">
+            <span class="lang-ar">معرض المشاريع</span>
+            <span class="lang-en">Projects Gallery</span>
+        </h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600" alt="مشروع 1">
+                <div class="card-content">
+                    <h3><span class="lang-ar">برنامج التمكين الاقتصادي</span><span class="lang-en">Economic Empowerment Program</span></h3>
+                    <p><span class="lang-ar">تدريب 100 شاب على إدارة المشاريع الصغيرة وتوفير منح تأسيسية.</span><span class="lang-en">Training 100 youth on small business management and providing startup grants.</span></p>
+                </div>
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600" alt="مشروع 2">
                 <div class="card-content">
