@@ -1,345 +1,4 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مؤسسة أثر شباب للتنمية - Ather Youth Foundation</title>
-    <meta name="description" content="مؤسسة أثر شباب للتنمية - منظمة غير ربحية تهدف لتمكين الشباب وتنمية المجتمع في حضرموت واليمن">
-    <style>
-        * {margin: 0; padding: 0; box-sizing: border-box;}
-        :root {
-            --primary: #1e3a8a;
-            --secondary: #f59e0b;
-            --dark: #0f172a;
-            --light: #f8fafc;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
-            background: var(--light);
-            color: var(--dark);
-            line-height: 1.8;
-        }
-        .lang-en {display: none;}
-        body.english .lang-ar {display: none;}
-        body.english .lang-en {display: block;}
-        body.english {direction: ltr;}
-        
-        header {
-            background: linear-gradient(135deg, var(--primary), #1e40af);
-            color: white;
-            padding: 1rem 5%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        .logo img {height: 60px; border-radius: 8px;}
-        .logo h1 {font-size: 1.5rem;}
-        nav {display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;}
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-        nav a:hover {color: var(--secondary);}
-        .lang-btn {
-            background: var(--secondary);
-            color: var(--dark);
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .hero {
-            background: linear-gradient(rgba(30,58,138,0.9), rgba(30,58,138,0.9)), url('https://images.unsplash.com/photo-1524178232363-1fb82ebc7e42?w=1200') center/cover;
-            color: white;
-            text-align: center;
-            padding: 6rem 5%;
-        }
-        .hero h2 {font-size: 2.5rem; margin-bottom: 1rem;}
-        .hero p {font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem;}
-        .btn {
-            background: var(--secondary);
-            color: var(--dark);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            transition: 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-        .btn:hover {transform: translateY(-3px); box-shadow: 0 5px 15px rgba(245,158,11,0.4);}
-        section {padding: 4rem 5%; max-width: 1200px; margin: 0 auto;}
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            color: var(--primary);
-            margin-bottom: 3rem;
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            width: 80px;
-            height: 4px;
-            background: var(--secondary);
-            display: block;
-            margin: 1rem auto 0;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        .card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: 0.3s;
-        }
-        .card:hover {transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15);}
-        .card img {width: 100%; height: 220px; object-fit: cover;}
-        .card-content {padding: 1.5rem;}
-        .card-content h3 {color: var(--primary); margin-bottom: 0.5rem;}
-        .news-date {color: #64748b; font-size: 0.9rem; margin-bottom: 0.5rem;}
-        .partners {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 3rem;
-        }
-        .partners img {
-            height: 80px;
-            filter: grayscale(100%);
-            opacity: 0.7;
-            transition: 0.3s;
-        }
-        .partners img:hover {filter: grayscale(0); opacity: 1;}
-        .report-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        footer {
-            background: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 3rem 5% 1rem;
-        }
-        .contact-info {margin-bottom: 2rem;}
-        .contact-info a {color: var(--secondary); text-decoration: none;}
-        @media (max-width: 768px) {
-            .hero h2 {font-size: 1.8rem;}
-            nav {justify-content: center; font-size: 0.9rem;}
-            .logo h1 {font-size: 1.2rem;}
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <img src="logo.jpeg" alt="شعار مؤسسة أثر شباب">
-                <h1>
-                    <span class="lang-ar">مؤسسة أثر شباب للتنمية</span>
-                    <span class="lang-en">Ather Youth Foundation</span>
-                </h1>
-            </div>
-            <nav>
-                <a href="#about"><span class="lang-ar">من نحن</span><span class="lang-en">About</span></a>
-                <a href="#news"><span class="lang-ar">الأخبار</span><span class="lang-en">News</span></a>
-                <a href="#projects"><span class="lang-ar">المشاريع</span><span class="lang-en">Projects</span></a>
-                <a href="#partners"><span class="lang-ar">الشركاء</span><span class="lang-en">Partners</span></a>
-                <a href="#reports"><span class="lang-ar">التقارير</span><span class="lang-en">Reports</span></a>
-                <a href="#contact"><span class="lang-ar">تواصل</span><span class="lang-en">Contact</span></a>
-                <button class="lang-btn" onclick="toggleLang()">
-                    <span class="lang-ar">EN</span>
-                    <span class="lang-en">AR</span>
-                </button>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero">
-        <h2>
-            <span class="lang-ar">نصنع الأثر.. نمكّن الشباب</span>
-            <span class="lang-en">Creating Impact.. Empowering Youth</span>
-        </h2>
-        <p>
-            <span class="lang-ar">مؤسسة غير ربحية تعمل على تمكين الشباب وتنمية المجتمع في حضرموت واليمن من خلال برامج التدريب والتأهيل والمبادرات التنموية.</span>
-            <span class="lang-en">A non-profit organization working to empower youth and develop communities in Hadhramout and Yemen through training, qualification programs and development initiatives.</span>
-        </p>
-        <a href="#contact" class="btn">
-            <span class="lang-ar">انضم إلينا</span>
-            <span class="lang-en">Join Us</span>
-        </a>
-    </section>
-
-    <section id="about">
-        <h2 class="section-title">
-            <span class="lang-ar">من نحن</span>
-            <span class="lang-en">About Us</span>
-        </h2>
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <p class="lang-ar">مؤسسة أثر شباب للتنمية هي منظمة مجتمع مدني غير ربحية تأسست بهدف الإسهام في تنمية المجتمع وتمكين الشباب عبر برامج نوعية في التدريب وبناء القدرات وريادة الأعمال والمبادرات المجتمعية.</p>
-            <p class="lang-en">Ather Youth Foundation is a non-profit civil society organization established to contribute to community development and youth empowerment through quality programs in training, capacity building, entrepreneurship, and community initiatives.</p>
-        </div>
-    </section>
-
-    <!-- قسم الأخبار -->
-    <section id="news" style="background: white;">
-        <h2 class="section-title">
-            <span class="lang-ar">أخبار المؤسسة</span>
-            <span class="lang-en">Foundation News</span>
-        </h2>
-        <div class="grid">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600" alt="خبر">
-                <div class="card-content">
-                    <div class="news-date">11 أبريل 2026</div>
-                    <h3><span class="lang-ar">إطلاق موقع المؤسسة الإلكتروني</span><span class="lang-en">Launch of Foundation Website</span></h3>
-                    <p><span class="lang-ar">أطلقت المؤسسة موقعها الإلكتروني الرسمي لتعزيز التواصل مع المجتمع والشركاء.</span><span class="lang-en">The foundation launched its official website to enhance communication with the community and partners.</span></p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600" alt="خبر">
-                <div class="card-content">
-                    <div class="news-date">5 أبريل 2026</div>
-                    <h3><span class="lang-ar">اختتام برنامج تأهيل 50 شاب وشابة</span><span class="lang-en">Completion of 50 Youth Training Program</span></h3>
-                    <p><span class="lang-ar">اختتمت المؤسسة برنامج تأهيل الشباب في المهارات الحياتية وريادة الأعمال.</span><span class="lang-en">The foundation concluded the youth qualification program in life skills and entrepreneurship.</span></p>
-                </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600" alt="خبر">
-                <div class="card-content">
-                    <div class="news-date">28 مارس 2026</div>
-                    <h3><span class="lang-ar">توقيع شراكة مع منظمة دولية</span><span class="lang-en">Partnership Signed with International Organization</span></h3>
-                    <p><span class="lang-ar">وقعت المؤسسة اتفاقية شراكة لتنفيذ مشاريع تنموية في حضرموت.</span><span class="lang-en">The foundation signed a partnership agreement to implement development projects in Hadhramout.</span></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- معرض المشاريع -->
-    <section id="projects">
-        <h2 class="section-title">
-            <span class="lang-ar">معرض المشاريع</span>
-            <span class="lang-en">Projects Gallery</span>
-        </h2>
-        <div class="grid">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600" alt="مشروع 1">
-                <div class="card-content">
-                    <h3><span class="lang-ar">برنامج التمكين الاقتصادي</span><span class="lang-en">Economic Empowerment Program</span></h3>
-                    <p><span class="lang-ar">تدريب 100 شاب على إدارة المشاريع الصغيرة وتوفير منح تأسيسية.</span><span class="lang-en">Training 100 youth on small business management and providing startup grants.</span></p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600" alt="مشروع 2">
-                <div class="card-content">
-                    <h3><span class="lang-ar">مبادرة سفراء السلام</span><span class="lang-en">Peace Ambassadors Initiative</span></h3>
-                    <p><span class="lang-ar">بناء قدرات 200 شاب في حل النزاعات وتعزيز التماسك المجتمعي.</span><span class="lang-en">Building capacity of 200 youth in conflict resolution and social cohesion.</span></p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600" alt="مشروع 3">
-                <div class="card-content">
-                    <h3><span class="lang-ar">حملة التوعية الصحية</span><span class="lang-en">Health Awareness        }
-        .btn:hover {transform: translateY(-3px); box-shadow: 0 5px 15px rgba(245,158,11,0.4);}
-        section {padding: 4rem 5%; max-width: 1200px; margin: 0 auto;}
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            color: var(--primary);
-            margin-bottom: 3rem;
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            width: 80px;
-            height: 4px;
-            background: var(--secondary);
-            display: block;
-            margin: 1rem auto 0;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        .card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: 0.3s;
-        }
-        .card:hover {transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15);}
-        .card img {width: 100%; height: 220px; object-fit: cover;}
-        .card-content {padding: 1.5rem;}
-        .card-content h3 {color: var(--primary); margin-bottom: 0.5rem;}
-        .news-date {color: #64748b; font-size: 0.9rem; margin-bottom: 0.5rem;}
-        .partners {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 3rem;
-        }
-        .partners img {
-            height: 80px;
-            filter: grayscale(100%);
-            opacity: 0.7;
-            transition: 0.3s;
-        }
-        .partners img:hover {filter: grayscale(0); opacity: 1;}
-        .report-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        footer {
-            background: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 3rem 5% 1rem;
-        }
-        .contact-info {margin-bottom: 2rem;}
-        .contact-info a {color: var(--secondary); text-decoration: none;}
-        @media (max-width: 768px) {
-            .hero h2 {font-size: 1.8rem;}
+rem;}
             nav {justify-content: center; font-size: 0.9rem;}
             .logo h1 {font-size: 1.2rem;}
         }
@@ -514,3 +173,193 @@
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤسسة أثر شباب للتنمية - Ather Youth Foundation for Development</title>
+    <meta name="description" content="مؤسسة أثر شباب للتنمية - رائدة في تمكين الشباب وصناعة أثر تنموي مستدام">
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+            color: #222;
+            background: #fff;
+        }
+        .lang-en {display: none;}
+        body.english .lang-ar {display: none;}
+        body.english .lang-en {display: block;}
+        body.english {direction: ltr;}
+        
+        .container {max-width: 1100px; margin: 0 auto; padding: 0 20px;}
+        header {
+            background: #1e3a8a;
+            color: white;
+            padding: 15px 0;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .header-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .logo h1 {font-size: 22px;}
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        nav a:hover {text-decoration: underline;}
+        .lang-btn {
+            background: #f59e0b;
+            color: #000;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: #f8fafc;
+        }
+        .hero h2 {font-size: 32px; color: #1e3a8a; margin-bottom: 15px;}
+        .hero p {font-size: 18px; max-width: 800px; margin: 0 auto 25px; color: #444;}
+        .btn {
+            background: #f59e0b;
+            color: #000;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 5px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        
+        section {padding: 50px 20px;}
+        section:nth-child(even) {background: #f8fafc;}
+        h2 {
+            font-size: 28px;
+            color: #1e3a8a;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        h3 {color: #1e3a8a; margin-bottom: 10px;}
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .card img {width: 100%; height: 180px; object-fit: cover; margin-bottom: 15px;}
+        .date {color: #666; font-size: 14px; margin-bottom: 8px;}
+        
+        .goals {counter-reset: goal;}
+        .goal-item {
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-right: 4px solid #f59e0b;
+            position: relative;
+        }
+        body.english .goal-item {
+            border-right: none;
+            border-left: 4px solid #f59e0b;
+        }
+        .goal-item::before {
+            counter-increment: goal;
+            content: counter(goal);
+            position: absolute;
+            right: -20px;
+            top: 20px;
+            background: #1e3a8a;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        body.english .goal-item::before {right: auto; left: -20px;}
+        
+        form {max-width: 600px; margin: 0 auto;}
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        label {display: block; margin-bottom: 5px; font-weight: bold;}
+        
+        .partners {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            align-items: center;
+        }
+        .partners img {height: 60px; opacity: 0.7;}
+        
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 40px 20px 20px;
+            text-align: center;
+        }
+        footer a {color: #f59e0b;}
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: right;
+            margin-bottom: 30px;
+        }
+        body.english .footer-grid {text-align: left;}
+        
+        @media (max-width: 768px) {
+            .hero h2 {font-size: 24px;}
+            nav {font-size: 14px; gap: 10px;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div>
+                    <span class="lang-ar">7730355780</span><span class="lang-en">7730355780</span> | 
+                    <span class="lang-ar">atheryouth.ayd@gmail.com</span><span class="lang-en">atheryouth.ayd@gmail.com</span>
+                </div>
+                <div>www.atheryouthayd</div>
+            </div
